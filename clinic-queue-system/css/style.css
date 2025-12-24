@@ -1,0 +1,96 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', sans-serif;
+}
+body {
+ min-height: 100vh;
+ background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+ color: #fff;
+}
+/* COMMON */
+a { color: #fff; text-decoration: none; }
+.topbar {
+ padding: 20px 40px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: rgba(0,0,0,0.25);
+}
+.container, .staff-container, .doctor-container {
+ padding: 60px;
+}
+/* BUTTONS */
+button, .btn {
+ padding: 14px 28px;
+ border-radius: 30px;
+ border: none;
+ cursor: pointer;
+ background: linear-gradient(45deg, #1abc9c, #16a085);
+ color: #fff;
+ font-weight: bold;
+ transition: 0.3s;
+}
+button:hover, .btn:hover {
+ transform: scale(1.05);
+}
+/* GLASS CARDS */
+.card, .token-card, .status-card, .queue-card, .doctor-card {
+ background: rgba(255,255,255,0.12);
+ backdrop-filter: blur(12px);
+ border-radius: 22px;
+ padding: 30px;
+}
+/* LANDING */
+.hero {
+ text-align: center;
+ padding: 120px 20px;
+}
+.hero h1 {
+ font-size: 52px;
+ margin-bottom: 20px;
+}
+.hero p {
+ max-width: 720px;
+ margin: auto;
+ opacity: 0.9;
+}
+.role-buttons {
+ margin-top: 40px;
+}
+/* PATIENT */
+.container {
+ display: flex;
+ justify-content: center;
+ gap: 40px;
+}
+input, select {
+ width: 100%;
+ padding: 12px;
+ margin: 12px 0;
+ border-radius: 10px;
+ border: none;
+}
+/* STAFF */
+.staff-container {
+ display: flex;
+ justify-content: space-around;
+}
+.queue-card ul {
+ list-style: none;
+ margin-top: 15px;
+}
+.queue-card li {
+ background: rgba(0,0,0,0.25);
+ padding: 10px;
+ border-radius: 10px;
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: space-between;
+}
+/* DOCTOR */
+.doctor-container {
+ display: flex;
+ justify-conntent: center;
+}
