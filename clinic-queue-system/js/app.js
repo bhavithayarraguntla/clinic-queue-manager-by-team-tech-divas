@@ -1,8 +1,6 @@
-// ================= NOTIFICATION PERMISSION =================
 if ("Notification" in window) {
  Notification.requestPermission();
 }
-// ================= PATIENT TOKEN =================
 function generateToken() {
  const nameInput = document.getElementById("patientName");
  const typeInput = document.getElementById("visitType");
@@ -26,7 +24,6 @@ function generateToken() {
  document.getElementById("patientsAhead").innerText = queue.length - 1;
  document.getElementById("waitTime").innerText = (queue.length - 1) * 10;
 }
-// ================= STAFF DASHBOARD =================
 function loadQueues() {
  loadQueue("emergency", "emergencyList");
  loadQueue("appointment", "appointmentList");
@@ -52,7 +49,6 @@ function markDone(type, index) {
  localStorage.setItem(type, JSON.stringify(queue));
  loadQueues();
 }
-// ================= DOCTOR DASHBOARD =================
 let currentPatient = null;
 function getNextPatient() {
  let emergency = JSON.parse(localStorage.getItem("emergency")) || [];
@@ -86,7 +82,6 @@ function endConsultation() {
  "Consultation completed. Next patient notified.";
  currentPatient = null;
 }
-// ================= NOTIFICATION =================
 function notifyPatient(patient) {
  if (Notification.permission === "granted") {
  new Notification("Clinic Alert ", {
@@ -96,5 +91,4 @@ function notifyPatient(patient) {
  alert(`Hello ${patient.name}, your turn is coming soon.`);
  }
 }
-// ================= AUTO LOAD STAFF QUEUES =================
 window.onload = loadQueues;
